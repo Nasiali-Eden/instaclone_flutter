@@ -1,3 +1,4 @@
-# A real-life clone for instagram using dart and flutter
+Real-life Instagram clone
+# Still in Initialization phase
 
-Still in its initialization phase.
+Link https://youtu.be/M9OPi53xRgE?feature=shared
