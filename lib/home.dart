@@ -95,6 +95,7 @@ class _homeState extends State<home> {
                   )),
               const Divider(),
               Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: List.generate(
                       10,
                       (index) => Column(
@@ -148,7 +149,26 @@ class _homeState extends State<home> {
                                     onPressed: () {},
                                   ),
                                 ],
-                              )
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(15),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    RichText(
+                                        text: const TextSpan(
+                                      style: TextStyle(color: Colors.black),
+                                      children: [
+                                        TextSpan(text: "Liked by"),
+                                        TextSpan(
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                            text: "Profile Name"),
+                                      ],
+                                    ))
+                                  ],
+                                ),
+                              ),
                             ],
                           )))
             ],
