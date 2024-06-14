@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatefulWidget {
@@ -10,6 +9,18 @@ class home extends StatefulWidget {
 
 
 class _homeState extends State<home>{
+  List<String> storybImages = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg",
+    "images/5.jpg",
+    "images/6.jpg",
+    "images/7.jpg",
+    "images/8.jpg",
+    "images/9.jpg",
+    "images/10.jpg",
+  ];
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -19,15 +30,15 @@ class _homeState extends State<home>{
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.add_circle_outline),
+            icon: const Icon(Icons.add_circle_outline),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.favorite_border),
+            icon: const Icon(Icons.favorite_border),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.chat_bubble_outline),
+            icon: const Icon(Icons.chat_bubble_outline),
             onPressed: () {},
           ),
         ],
@@ -41,14 +52,35 @@ class _homeState extends State<home>{
               child: Row(
                   children:List.generate(
                     10, (index) => Container(
-                      child: CircleAvatar(),
-                  ),
+                      padding: const EdgeInsets.all(8),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                          radius: 35,
+                          backgroundImage: const AssetImage(
+                            "images/story.jpg",
+                          ),
+                          child: CircleAvatar(
+                            radius: 32,
+                            backgroundImage: AssetImage(
+                              storybImages[index],
+                          ),
+                        ),
+                    ),
+                       const SizedBox(height: 10,),
+                       const Text(
+                         "Profile Name",
+                         style: TextStyle(fontSize: 12),
+                       )
+                        ],
+                ),
               ),
             ),
         )
-          ],
         ),
+        ],
       ),
+      )
     );
   }
 }
