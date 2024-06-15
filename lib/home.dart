@@ -33,6 +33,10 @@ class _homeState extends State<home> {
     "images/post_9.jpg",
     "images/post_10.jpg",
   ];
+
+  Future<void> onRefresh()async{
+    await Future.delayed(const Duration(seconds: 1));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +60,9 @@ class _homeState extends State<home> {
             ),
           ],
         ),
-        body: SingleChildScrollView(
+        body: RefreshIndicator(
+          onRefresh: onRefresh,
+        child: SingleChildScrollView(
           child: Column(
             children: [
               //STORY
@@ -198,6 +204,8 @@ class _homeState extends State<home> {
                           )))
             ],
           ),
-        ));
+        ),
+        ),
+    );
   }
 }
