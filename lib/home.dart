@@ -159,13 +159,38 @@ class _homeState extends State<home> {
                                         text: const TextSpan(
                                       style: TextStyle(color: Colors.black),
                                       children: [
-                                        TextSpan(text: "Liked by"),
+                                        TextSpan(text: "Liked by "),
                                         TextSpan(
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold),
-                                            text: "Profile Name"),
+                                            text: "Profile Name "),
+                                        TextSpan(text: "and "),
+                                        TextSpan(
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                            text: "Others"),
                                       ],
-                                    ))
+                                    )),
+                                    RichText(
+                                      text: const TextSpan(
+                                        style: TextStyle(color: Colors.black),
+                                        children: [
+                                          TextSpan(
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold),
+                                              text: "Profile Name "),
+                                          TextSpan(
+                                              text:
+                                                  "Caption, caption caption caption "),
+                                        ],
+                                      ),
+                                    ),
+                                    const Text(
+                                      "View all 12 Comments",
+                                      style: TextStyle(
+                                        color: Colors.black38,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
