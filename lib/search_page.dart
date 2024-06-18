@@ -5,6 +5,19 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> buttons = [
+      "IGTV",
+      "Travel",
+      "Architecture",
+      "Decor",
+      "Style",
+      "Food",
+      "Art",
+      "Beauty",
+      "DIY",
+      "Music",
+    ];
+
     return Scaffold(
         body: CustomScrollView(slivers: [
       SliverAppBar(
@@ -26,7 +39,24 @@ class SearchPage extends StatelessWidget {
             onPressed: () {},
           )
         ],
-      )
+      ),
+          SliverAppBar(
+            title: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(10, (index) => Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    child: Text(
+                      buttons[index],
+                    ),
+
+                  ),
+                )),
+              ),
+            ),
+          )
     ]));
   }
 }
