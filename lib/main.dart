@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: currentPage == 1 ? SearchPage() : const home(),
+      body: currentPage == 1 ? const SearchPage() : const home(),
       bottomNavigationBar: BottomAppBar(child: Row(
         children: [
           const Spacer(),
