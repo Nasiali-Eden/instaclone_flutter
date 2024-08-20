@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'search_page.dart';
+import 'splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SplashScreen(),   // Splash screen route
+        '/home': (context) => MyHomePage(), // Main screen route
+      },
     );
   }
 }
