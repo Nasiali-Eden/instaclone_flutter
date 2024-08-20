@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           const Spacer(),
           IconButton(
-            icon: Icon(Icons.person,
+            icon: Icon(Icons.person_2,
               color: currentPage == 4
                 ? const Color.fromRGBO(203, 73, 202, 1)
                 : const Color.fromRGBO(40, 40, 40, 1),
