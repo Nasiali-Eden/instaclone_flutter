@@ -91,6 +91,7 @@ flutter:
     - images/pink.png
     - images/brand_name1.png
     - images/story.jpg
+    - assets/opening_page.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
